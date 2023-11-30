@@ -147,9 +147,9 @@ public class SanPhamJPanel extends javax.swing.JPanel {
         model.setGiaBan(Integer.valueOf(txtGiaBan.getText()));
         model.setSoLuong(Integer.valueOf(txtSoLuong.getText()));
         model.setDonVi(cboDonVi.getSelectedItem() + "");
-        lbAnh.getToolTipText();
         imageName = lbAnh.getToolTipText();
         model.setHinhSanPham(imageName);
+        System.out.println(imageName);
         return model;
     }
 
@@ -178,6 +178,7 @@ public class SanPhamJPanel extends javax.swing.JPanel {
         txtSoLuong.setText(String.valueOf(model.getSoLuong()));
         cboDonVi.setSelectedItem(model.getDonVi());
         if (model.getHinhSanPham() != null) {
+            //setToolTip get Image when click table
             lbAnh.setToolTipText(model.getHinhSanPham());
             lbAnh.setIcon(Resize(ShareHelper.readLogo(model.getHinhSanPham())));
         }
@@ -242,6 +243,7 @@ public class SanPhamJPanel extends javax.swing.JPanel {
     void insert() {
         SanPham model = getModel();
         try {
+            model.setGiamGia(0);
             sanPhamDAO.insert(model);
             this.fillTable();
             Notifier.alert(this,"Thêm mới thành công!");
@@ -249,7 +251,6 @@ public class SanPhamJPanel extends javax.swing.JPanel {
             Notifier.alert(this,"Thêm mới thất bại!");
             e.printStackTrace();
         }
-
     }
 
     void update() {
@@ -518,6 +519,9 @@ public class SanPhamJPanel extends javax.swing.JPanel {
         lbAnh.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbAnhMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbAnhMouseEntered(evt);
             }
         });
 
@@ -841,6 +845,8 @@ public class SanPhamJPanel extends javax.swing.JPanel {
                     System.out.println(imageName);
                     lbAnh.setText("");
                     ResizeImage(imageName);
+                    //setToolTip get Image when click and choose img lbAnh
+                    lbAnh.setToolTipText(imageName);
                 } else {
                     Notifier.alert(this,"bạn chưa chọn ảnh");
                 }
@@ -878,6 +884,10 @@ public class SanPhamJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         Find();
     }//GEN-LAST:event_btnTimActionPerformed
+
+    private void lbAnhMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbAnhMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbAnhMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

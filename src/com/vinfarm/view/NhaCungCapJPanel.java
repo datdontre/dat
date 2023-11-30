@@ -99,11 +99,11 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
         btnSua.setEnabled(!insertable);
 
         tblNCC.setRowSelectionAllowed(!insertable);
-        /*if (nhaCungCapDAO.check_lh(txtMaNCC.getText()).equals("0")) {
+        if (nhaCungCapDAO.check_lh(txtMaNCC.getText()).equals("0")) {
             btnXoa.setEnabled(false);
         } else {
             btnXoa.setEnabled(true);
-        }*/
+        }
         if (ncc != null) {
             txtMaNCC.setEnabled(insertable);
         } else {

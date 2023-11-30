@@ -14,7 +14,7 @@ import java.util.List;
 public class SanPhamDAO {
 
     public void insert(SanPham model) {
-        String sql = "INSERT INTO SanPham (MaSP, MaLH, TenSP, GiaBan, HinhSP, MaNCC, SOLG, DonVi) VALUES (UPPER(?), ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO SanPham (MaSP, MaLH, TenSP, GiaBan, HinhSP, MaNCC, SOLG, DonVi, GiamGia) VALUES (UPPER(?), ?, ?, ?, ?, ?, ?, ?, ?)";
         JdbcHelper.executeUpdate(sql,
                 model.getMaSanPham(),
                 model.getMaLoaiHang(),
@@ -23,8 +23,8 @@ public class SanPhamDAO {
                 model.getHinhSanPham(),
                 model.getMaNhaCungCap(),
                 model.getSoLuong(),
-                model.getDonVi());
-                
+                model.getDonVi(),
+                model.getGiamGia());
     }
 
     public void update(SanPham model) {

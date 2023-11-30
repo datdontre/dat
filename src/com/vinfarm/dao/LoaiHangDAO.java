@@ -96,7 +96,7 @@ public class LoaiHangDAO {
       }
         public String check_lh(String malh) {
         String sql = "{call check_lh(?)}";
-        String cols = "malh";
+        String cols = "slspbylh";
         return this.getcol(sql, cols, malh);
     }
 }

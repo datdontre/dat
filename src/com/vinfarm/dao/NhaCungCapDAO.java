@@ -105,7 +105,7 @@ public class NhaCungCapDAO {
       }
         public String check_lh(String mancc) {
         String sql = "{call check_ncc(?)}";
-        String cols = "MaNCC";
+        String cols = "sllh";
         return this.getcol(sql, cols, mancc);
     }
 }
