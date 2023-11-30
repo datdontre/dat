@@ -35,7 +35,12 @@ public class LoaiHangDAO {
         String sql = "SELECT * FROM LoaiHang";
         return select(sql);
     }
-
+    
+    public List<LoaiHang> selectByName(String namekh) {
+        String sql = "SELECT * FROM LoaiHang WHERE TenLH like N'%'+?+'%'";
+        return select(sql, namekh);
+    }
+    
     public LoaiHang findById(String makh) {
         String sql = "SELECT * FROM LoaiHang WHERE MaLH=?";
         List<LoaiHang> list = select(sql, makh);

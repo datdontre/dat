@@ -4,6 +4,8 @@
  */
 package com.vinfarm.view;
 
+import com.vinfarm.entity.NhanVien;
+
 /**
  *
  * @author hau
@@ -17,6 +19,24 @@ public class DoiMatKhauJPanel extends javax.swing.JPanel {
         initComponents();
     }
 
+    private void doiMatKhau() {
+        /*String manv = txtMaNV.getText();
+        String matKhau = new String(txtDanhTinh.getPassword());
+        String matKhauMoi = new String(txtMatkhaumoi.getPassword());
+        NhanVien nhanVien = dao.selectById(manv);
+        if(nhanVien == null){
+            MsgBox.alert(this, "Sai tÃªn Ä‘Äƒng nháº­p!");
+        }
+        else if(rdoMKC.isSelected()){
+            if(!matKhau.equals(nhanVien.getMatKhau())){
+                MsgBox.alert(this, "Sai máº­t kháº©u!");
+            }else{
+                nhanVien.setMatKhau(matKhauMoi);
+                dao.update(nhanVien);
+                MsgBox.alert(this, "Ä�á»•i máº­t kháº©u thÃ nh cÃ´ng!");
+            }
+        }*/
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -60,6 +60,11 @@ public class SanPhamDAO {
         return select(sql);
     }
     
+    public List<SanPham> selectbyName(String namesp) {
+        String sql = "SELECT * FROM SanPham WHERE TenSP like N'%'+?+'%'";
+        return select(sql, namesp);
+    }
+    
     public List<SanPham> select_notIn_nhap(String soPhieu) {
         String sql = "select * from SanPham where MaSP not in (select MaSP from CTHDNhap where SoPhieu = ?)";
         return select(sql, soPhieu);
@@ -144,7 +149,7 @@ public void update_soLuong(int soLuong, String maSanPham) {
       }
         public String check_sl(String masp) {
         String sql = "{call check_sp(?)}";
-        String cols = "masp";
+        String cols = "solg";
         return this.getcol(sql, cols, masp);
     }
 }

@@ -41,6 +41,11 @@ public class NhaCungCapDAO {
         String sql = "SELECT * FROM NhaCungCap";
         return select(sql);
     }
+    
+    public List<NhaCungCap> selectByName(String namekh) {
+        String sql = "SELECT * FROM NhaCungCap WHERE TenNCC like N'%'+?+'%'";
+        return select(sql, namekh);
+    }
 
     public NhaCungCap findById(String makh) {
         String sql = "SELECT * FROM NhaCungCap WHERE MaNCC=?";
