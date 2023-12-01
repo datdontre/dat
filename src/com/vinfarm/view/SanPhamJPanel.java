@@ -359,8 +359,8 @@ public class SanPhamJPanel extends javax.swing.JPanel {
             Notifier.alert(this, "Tên sản phẩm không được để trống");
             return false;
         }
-        String valiname ="/^[\\p{L} \\.'\\-]+$/";
-        if (txtTenSanPham.getText().matches(valiname)) {             
+        String valiname = "^[\\p{L} \\.'\\-]+$";
+        if (!txtTenSanPham.getText().matches(valiname)) {             
             Notifier.alert(this, "Tên sản phẩm không đúng định dạng");
             txtTenSanPham.setBackground(new Color(250, 250, 210));
             return false;

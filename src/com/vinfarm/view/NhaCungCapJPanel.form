@@ -16,7 +16,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel1" min="-2" pref="867" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -116,7 +116,7 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="txtTenNCC" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtTen" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jLabel51" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtMaNCC" alignment="0" pref="193" max="32767" attributes="0"/>
                                           <Component id="jLabel52" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -179,7 +179,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtTenNCC" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="txtTen" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="txtSDT" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="8" max="32767" attributes="0"/>
@@ -222,17 +222,17 @@
                 <Property name="text" type="java.lang.String" value="T&#xea;n nh&#xe0; cung c&#x1ea5;p"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtTenNCC">
+            <Component class="javax.swing.JTextField" name="txtTen">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
                     <EmptyBorder/>
                   </Border>
                 </Property>
-                <Property name="name" type="java.lang.String" value="txtTenNCC" noResource="true"/>
+                <Property name="name" type="java.lang.String" value="txtTen" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTenNCCActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTenActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnXoa">

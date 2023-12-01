@@ -79,7 +79,7 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
     NhaCungCap getModel() {
         NhaCungCap model = new NhaCungCap();
         model.setMaNhaCungCap(txtMaNCC.getText());
-        model.setTenNhaCungCap(txtTenNCC.getText());
+        model.setTenNhaCungCap(txtTen.getText());
         model.setSdtNhaCungCap(txtSDT.getText());
         model.setEmailNhaCungCap(txtEmail.getText());
         model.setDiaChiNhaCungCap(txtDiaChi.getText());
@@ -88,7 +88,7 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
 
     void setModel(NhaCungCap model) {
         txtMaNCC.setText(model.getMaNhaCungCap());
-        txtTenNCC.setText(model.getTenNhaCungCap());
+        txtTen.setText(model.getTenNhaCungCap());
         txtSDT.setText(model.getSdtNhaCungCap());
         txtEmail.setText(model.getEmailNhaCungCap());
         txtDiaChi.setText(model.getDiaChiNhaCungCap());
@@ -99,11 +99,11 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
         btnSua.setEnabled(!insertable);
 
         tblNCC.setRowSelectionAllowed(!insertable);
-        if (nhaCungCapDAO.check_lh(txtMaNCC.getText()).equals("0")) {
+        /*if (nhaCungCapDAO.check_lh(txtMaNCC.getText()).equals("0")) {
             btnXoa.setEnabled(false);
         } else {
             btnXoa.setEnabled(true);
-        }
+        }*/
         if (ncc != null) {
             txtMaNCC.setEnabled(insertable);
         } else {
@@ -138,7 +138,7 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
         txtDiaChi.setBackground(Color.white);
         txtEmail.setBackground(Color.white);
         txtSDT.setBackground(Color.white);
-        txtTenNCC.setBackground(Color.white);
+        txtTen.setBackground(Color.white);
         txtMaNCC.setBackground(Color.white);
         fillTable();
     }
@@ -259,7 +259,7 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
         jLabel51 = new javax.swing.JLabel();
         txtMaNCC = new javax.swing.JTextField();
         jLabel52 = new javax.swing.JLabel();
-        txtTenNCC = new javax.swing.JTextField();
+        txtTen = new javax.swing.JTextField();
         btnXoa = new javax.swing.JButton();
         btnPre = new javax.swing.JButton();
         btnNext = new javax.swing.JButton();
@@ -296,11 +296,11 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
 
         jLabel52.setText("Tên nhà cung cấp");
 
-        txtTenNCC.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtTenNCC.setName("txtTenNCC"); // NOI18N
-        txtTenNCC.addActionListener(new java.awt.event.ActionListener() {
+        txtTen.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtTen.setName("txtTen"); // NOI18N
+        txtTen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTenNCCActionPerformed(evt);
+                txtTenActionPerformed(evt);
             }
         });
 
@@ -413,7 +413,7 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(txtTenNCC, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtTen, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel51, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtMaNCC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
                                     .addComponent(jLabel52, javax.swing.GroupLayout.Alignment.LEADING))
@@ -460,7 +460,7 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel54))
                 .addGap(3, 3, 3)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTenNCC, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTen, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtSDT, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -546,7 +546,7 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 867, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -598,9 +598,9 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
         delete();
     }//GEN-LAST:event_btnXoaActionPerformed
 
-    private void txtTenNCCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTenNCCActionPerformed
+    private void txtTenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtTenNCCActionPerformed
+    }//GEN-LAST:event_txtTenActionPerformed
 
     private void tblNCCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblNCCMouseClicked
         // TODO add your handling code here:
@@ -628,11 +628,11 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
             Notifier.alert(this, String.valueOf(str));
             return false;
         }
-        if (Validate.isTrong(txtTenNCC, str, "Họ tên không được để trống")) {
+        if (Validate.isTrong(txtTen, str, "Họ tên không được để trống")) {
             Notifier.alert(this, String.valueOf(str));
             return false;
         }
-        if (Validate.isTen(txtTenNCC, str, "Họ tên sai định định dạng")) {
+        if (!Validate.isTen(txtTen, str, "Họ tên sai định định dạng")) {
             Notifier.alert(this, String.valueOf(str));
             return false;
         }
@@ -690,7 +690,7 @@ public class NhaCungCapJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtMaNCC;
     private javax.swing.JTextField txtSDT;
-    private javax.swing.JTextField txtTenNCC;
+    private javax.swing.JTextField txtTen;
     private javax.swing.JTextField txtTim;
     // End of variables declaration//GEN-END:variables
 }

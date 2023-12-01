@@ -39,7 +39,7 @@ public class Validate {
     
     public static boolean isDiaChi(JTextField txtFiled, StringBuilder str, String msg) {
         String strFiled = txtFiled.getText().trim();
-        String valiemail1 ="/^[\\p{L} \\.'\\-]+$/";
+        String valiemail1 = "^[\\p{L} \\.'\\-]+$";
         if (!strFiled.matches(valiemail1)) {             
             str.append(msg).append("\n");
             txtFiled.setBackground(new Color(250, 250, 210));
@@ -63,7 +63,7 @@ public class Validate {
     
     public static boolean isTK(JTextField txtField, StringBuilder str, String msg){
         String strFiled = txtField.getText().trim();
-        String valiTH ="/^[\\p{L} \\.'\\-]+$/";
+        String valiTH = "^[\\p{L} \\.'\\-]+$";
         if(!strFiled.matches(valiTH)){
             str.append(msg).append("\n");
             txtField.setBackground(new Color(250, 250, 210));
@@ -75,7 +75,7 @@ public class Validate {
     
     public static boolean isSDT(JTextField txtFiled, StringBuilder str, String msg) {
         String strFiled = txtFiled.getText().trim();
-        String valiemail ="^\\d{10}$";
+        String valiemail ="^\\d{10,11}$";
         if (!strFiled.matches(valiemail)) {             
             str.append(msg).append("\n");
             txtFiled.setBackground(new Color(250, 250, 210));
@@ -87,7 +87,7 @@ public class Validate {
     
     public static boolean isTen(JTextField txtFiled, StringBuilder str, String msg) {
         String strFiled = txtFiled.getText().trim();
-        String valiname ="/^[\\p{L} \\.'\\-]+$/";
+        String valiname = "^[\\p{L} \\.'\\-]+$";
         if (!strFiled.matches(valiname)) {             
             str.append(msg).append("\n");
             txtFiled.setBackground(new Color(250, 250, 210));
